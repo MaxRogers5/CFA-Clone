@@ -66,7 +66,7 @@ function respond() {
   } 
   else if(request.text && botRegexYoutube.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://www.youtube.com/user/"+request.text.substring(8,request.text.length));
+    postMessage("https://www.youtube.com/user/"+request.text.substring(9,request.text.length));
     this.res.end();
   } 
   else if(request.text && botRegexCoaches.test(request.text)) {
