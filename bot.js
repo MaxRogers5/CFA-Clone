@@ -77,7 +77,7 @@ function respond() {
   }
   else if (request.text && botRegexAllUsers.test(request.text)){
     this.res.writeHead(200);
-    postMessage("@(Dolphins) W0PSuprise @Ali (Seahawks) @Bergman(Patriots) @Browns(Killerpokerstud) @Daniel(Bills) @Dave Mrozball Cards @Dreamshatterer30(Jets) @Grimlock9115 (Texans) 2403042225 @Hova (Panthers) @Huey ,Tampa @James - Eagles need a CB picks OTB @Jedi(Jaguars)Comitee @Jon (Bengals) @Kalelston (Rams) @Loux02 (Falcons) @Mack (Chargers) @MotorCityMayham (Lions) @Nabosian (Chiefs) @Pete Testa (Packers) @Polar @RAVENS [] Skip @Rush (Colts) @Scoobysnakx (WAS) @Scrymel (Broncos) @Steelers @Zalseph (MIN) @Max (Saints) @Sean (Giants) @Robbie (Titans) ");
+    postMessage("@(Dolphins) W0PSuprise @Ali (Seahawks) @Bergman(Patriots) @Browns(Killerpokerstud) @Daniel(Bills) @Dave Mrozball Cards @Dreamshatterer30(Jets) @Grimlock9115 (Texans) 2403042225 @Hova (Panthers) @Huey ,Tampa @James - Eagles need a CB picks OTB @Jedi(Jaguars)Comitee @Jon (Bengals) @Kalelston (Rams) @Loux02 (Falcons) @Mack (Chargers) @MotorCityMayham (Lions) @Nabosian (Chiefs) @Pete Testa (Packers) @Polar @RAVENS [] Skip @Rush (Colts) @Scoobysnakx (WAS) @Scrymel (Broncos) @Steelers @Zalseph (MIN) @Max (Saints) @Sean (Giants) @Robbie (Titans) @Max Rogers");
     this.res.end()  
   } 
   else {
