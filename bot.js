@@ -15,6 +15,7 @@ function respond() {
       botRegexCoaches = /^\/coaches/;  
       botRegexOW = /^\/ratings/; 
       botRegexUserGames = /^\/usergames/;
+      botRegexAllUsers = /^\/all/i;
       botRegexStand = /^\/standings/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -73,6 +74,11 @@ function respond() {
     this.res.writeHead(200);
     postMessage("https://www.daddyleagues.com/cfa/coaches");
     this.res.end();
+  }
+  else if (request.text && botRegexAllUsers.test(request.text)){
+    this.res.writeHead(200);
+    postMessage("@(Dolphins) W0PSuprise @Ali (Seahawks) @Bergman(Patriots) @Browns(Killerpokerstud) @Daniel(Bills) @Dave Mrozball Cards @Dreamshatterer30(Jets) @Grimlock9115 (Texans) 2403042225 @Hova (Panthers) @Huey ,Tampa @James - Eagles need a CB picks OTB @Jedi(Jaguars)Comitee @Jon (Bengals) @Kalelston (Rams) @Loux02 (Falcons) @Mack (Chargers) @MotorCityMayham (Lions) @Nabosian (Chiefs) @Pete Testa (Packers) @Polar @RAVENS [] Skip @Rush (Colts) @Scoobysnakx (WAS) @Scrymel (Broncos) @Steelers @Zalseph (MIN) @Max (Saints) @Sean (Giants) @Robbie (Titans) ");
+    this.res.end()  
   } 
   else {
     console.log("don't care");
