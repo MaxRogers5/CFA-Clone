@@ -11,6 +11,7 @@ function respond() {
       botRegexSC = /^\/schedule/i; 
       botRegexPlayer = /^\/player/i;  
       botRegexTw = /^\/twitch/i; 
+      botRegexYoutube = /^\/youtube/i;
       botRegexCoaches = /^\/coaches/;  
       botRegexOW = /^\/ratings/; 
       botRegexUserGames = /^\/usergames/;
@@ -61,6 +62,11 @@ function respond() {
   else if(request.text && botRegexTw.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
+    this.res.end();
+  } 
+  else if(request.text && botRegexYoutube.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://www.youtube.com/user/"+request.text.substring(8,request.text.length));
     this.res.end();
   } 
   else if(request.text && botRegexCoaches.test(request.text)) {
