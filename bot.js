@@ -8,14 +8,13 @@ function respond() {
       botRegex = /^\/cool guy/; 
       botRegexDepth = /^\/depth/i;
       botRegexRules = /^\/rules/
+      botRegexFourth = /^\/4thdown/i;
       botRegexSC = /^\/schedule/i; 
       botRegexPlayer = /^\/player/i;  
       botRegexTw = /^\/twitch/i; 
       botRegexYoutube = /^\/youtube/i;
       botRegexCoaches = /^\/coaches/;  
       botRegexOW = /^\/ratings/; 
-      botRegexUserGames = /^\/usergames/;
-      botRegexAllUsers = /^\/all/i;
       botRegexStand = /^\/standings/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -45,10 +44,14 @@ function respond() {
     this.res.writeHead(200);
     postMessage("https://www.daddyleagues.com/cfa/rules");
     this.res.end();
+  }
+  else if (request.text && botRegexFourth.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("4th down rules:\n- 4th and 2 on your opponents 40 yard line and in.\n- Anytime you are losing in the 4th quarter.")
+    this.res.end();  
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
-    
     postMessage("http://daddyleagues.com/cfa/team/"+request.text.substring(10,13)+"/schedule");
     this.res.end();
   }
@@ -75,11 +78,6 @@ function respond() {
     postMessage("https://www.daddyleagues.com/cfa/coaches");
     this.res.end();
   }
-  else if (request.text && botRegexAllUsers.test(request.text)){
-    this.res.writeHead(200);
-    postMessage("@(Dolphins) W0PSuprise @Ali (Seahawks) @Bergman(Patriots) @Browns(Killerpokerstud) @Daniel(Bills) @Dave Mrozball Cards @Dreamshatterer30(Jets) @Grimlock9115 (Texans) 2403042225 @Hova (Panthers) @Huey ,Tampa @James - Eagles need a CB picks OTB @Jedi(Jaguars)Comitee @Jon (Bengals) @Kalelston (Rams) @Loux02 (Falcons) @Mack (Chargers) @MotorCityMayham (Lions) @Nabosian (Chiefs) @Pete Testa (Packers) @Polar @RAVENS [] Skip @Rush (Colts) @Scoobysnakx (WAS) @Scrymel (Broncos) @Steelers @Zalseph (MIN) @Max (Saints) @Sean (Giants) @Robbie (Titans) @Max Rogers");
-    this.res.end()  
-  } 
   else {
     console.log("don't care");
     this.res.writeHead(200);
