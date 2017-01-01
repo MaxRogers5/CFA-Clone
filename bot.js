@@ -47,7 +47,7 @@ function respond() {
   }
   else if (request.text && botRegexFourth.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("4th down rules:\n- 4th and 2 on your opponents 40 yard line and in.\n- Anytime you are losing in the 4th quarter.")
+    postMessage("4th down rules:\n- 4th and 2 on your opponents 40 yard line and in\n- Anytime you are losing in the 4th quarter")
     this.res.end();  
   } 
   else if(request.text && botRegexSC.test(request.text)) {
