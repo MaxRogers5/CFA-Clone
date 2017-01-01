@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/; 
       botRegexDepth = /^\/depth/i;
       botRegexRules = /^\/rules/
-      botRegexFourth = /^\/4thdown/i;
+      botRegexFourth = /^\/(4thdown|4down|4th)/i;
       botRegexSC = /^\/schedule/i; 
       botRegexPlayer = /^\/player/i;  
       botRegexTw = /^\/twitch/i; 
