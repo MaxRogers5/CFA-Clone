@@ -13,7 +13,8 @@ function respond() {
       botRegexPlayer = /^\/player/i;  
       botRegexTw = /^\/twitch/i; 
       botRegexYoutube = /^\/youtube/i;
-      botRegexCoaches = /^\/coaches/;  
+      botRegexCoaches = /^\/coaches/;
+      botFreeAgents = /^\/freeagents/;  
       botRegexOW = /^\/ratings/; 
       botRegexStand = /^\/standings/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -49,6 +50,11 @@ function respond() {
     this.res.writeHead(200);
     postMessage("4th down rules:\n- 4th and 2 on your opponents 40 yard line and in\n- Anytime you are losing in the 4th quarter")
     this.res.end();  
+  }
+  else if(request.text && botFreeAgents.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/cfa/players?name=&position=all&team=fa");
+    this.res.end();
   } 
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
