@@ -68,7 +68,7 @@ function respond() {
     var req = request.text.substring(8,request.text.length);
     var rep = req.replace(/ /,"+");
     var lookUp = (allPlayers.indexOf(req) > -1);
-    postMessage(lookUp)
+    postMessage(lookUp);
     this.res.end();
   }  
   else if(request.text && botRegexTw.test(request.text)) {
