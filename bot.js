@@ -66,8 +66,8 @@ function respond() {
   else if(request.text && botRegexPlayer.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(8,request.text.length);
-    postMessage(req)
     var rep = req.replace(/ /,"+");
+    postMessage(rep)
     //for (i in allPlayers) {
       //if (req in i) {
       //postMessage(i[0])
