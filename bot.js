@@ -67,13 +67,9 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(8,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage(rep)
-    //for (i in allPlayers) {
-      //if (req in i) {
-      //postMessage(i[0])
-      //} else {
-          //postMessage("http://daddyleagues.com/cfa/players?name="+rep+"&position=all&team=all");
-      //}  
+    for (i in allPlayers) {
+      postMessage(allPlayers)
+      }  
     this.res.end();
   }  
   else if(request.text && botRegexTw.test(request.text)) {
