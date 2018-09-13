@@ -68,12 +68,9 @@ function respond() {
     var req = request.text.substring(8,request.text.length);
     var rep = req.replace(/ /,"+");
     for(var i = 0; i < allPlayers.length; i++){
-      for(var j = 0; j < allPlayers[i].length; j++){
-        if(parentArray[i][j].indexOf(req) > -1){
-          postMessage("TEST");
-        }
+      if(i < 3){
+      postMessage("TEST");
       }
-    }
     this.res.end();
   }  
   else if(request.text && botRegexTw.test(request.text)) {
