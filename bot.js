@@ -67,8 +67,13 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(8,request.text.length);
     var rep = req.replace(/ /,"+");
-    var lookUp = (allPlayers.indexOf(req) > -1);
-    postMessage(lookUp);
+    for(var i = 0; i < allPlayers.length; i++){
+      for(var j = 0; j < allPlayers[i].length; j++){
+        if(parentArray[i][j].indexOf(req) > -1){
+          postMessage(parentArray[i][j]);
+        }
+      }
+    }
     this.res.end();
   }  
   else if(request.text && botRegexTw.test(request.text)) {
