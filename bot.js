@@ -70,7 +70,7 @@ function respond() {
     for(var i = 0; i < allPlayers.length; i++){
       for(var j = 0; j < allPlayers[i].length; j++){
         if(j<3){
-          postMessage("TEST")
+          postMessage("TEST");
         }
       }
     }
