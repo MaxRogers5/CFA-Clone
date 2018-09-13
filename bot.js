@@ -68,7 +68,7 @@ function respond() {
     var req = request.text.substring(8,request.text.length);
     var rep = req.replace(/ /,"+");
     for (i=0;i<2;i++) {
-      postMessage(i)
+      postMessage(i);
       }  
     this.res.end();
   }  
