@@ -68,8 +68,10 @@ function respond() {
     var req = request.text.substring(8,request.text.length);
     var rep = req.replace(/ /,"+");
     for(var i = 0; i < allPlayers.length; i++){
-      if(i < 3){
-      postMessage("TEST");
+      for(var j = 0; j < allPlayers[i].length; j++){
+        if(j<3){
+          postMessage("TEST")
+        }
       }
     }
     this.res.end();
