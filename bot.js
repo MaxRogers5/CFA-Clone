@@ -1,3 +1,20 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @MaxRogers5 Sign out
+1
+0 0 MaxRogers5/CFA-Clone
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
+CFA-Clone/bot.js
+301932a  3 minutes ago
+@MaxRogers5 MaxRogers5 Update bot.js
+     
+138 lines (124 sloc)  313 KB
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
@@ -67,9 +84,10 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(8,request.text.length);
     var rep = req.replace(/ /,"+");
-    for (i=0;i<2;i++) {
-      postMessage(i);
-      }  
+    var arrayLength = 3
+    for (var i = 0; i < arrayLength; i++){
+    	postMessage("test");
+    }
     this.res.end();
   }  
   else if(request.text && botRegexTw.test(request.text)) {
