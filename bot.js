@@ -71,6 +71,7 @@ function respond() {
       if(i < 3){
       postMessage("TEST");
       }
+    }
     this.res.end();
   }  
   else if(request.text && botRegexTw.test(request.text)) {
