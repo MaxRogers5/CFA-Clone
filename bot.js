@@ -67,9 +67,10 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(8,request.text.length);
     var rep = req.replace(/ /,"+");
-    var arrayLength = 3
-    for (var i = 0; i < arrayLength; i++){
-    	postMessage("test");
+    for (var i = 0; i < allPlayers.length; i++){
+    	if(allPlayers.indexOf(req) > -1){
+        postMessage(str(allPlayers.indexOf(reg)))
+      }
     }
     this.res.end();
   }  
