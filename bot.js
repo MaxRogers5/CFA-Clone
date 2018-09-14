@@ -8,7 +8,7 @@ var allPlayers = [['<a href="https://www.daddyleagues.com/cfa/players?position=a
 function get_matching_list(test_str, list_of_lists){
     list_of_lists.forEach(function(row){
        if (row.indexOf(test_str) != -1) {
-         return(row[0])
+         lookup = (row[0])
        }
     });
 }
@@ -75,8 +75,7 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(8,request.text.length);
     var rep = req.replace(/ /,"+");
-    var lookup = get_matching_list(req,allPlayers)
-    postMessage(req)
+    get_matching_list(req, allPlayers)
     postMessage(lookup)
     this.res.end();
   }  
