@@ -9,7 +9,10 @@ function get_matching_list(test_str, list_of_lists){
     list_of_lists.forEach(function(row){
        if (row.indexOf(test_str) != -1) {
          lookup = (row[0])
-       }
+       } 
+        else {
+            postMessage("http://daddyleagues.com/cfa/players?name="+rep+"&position=all&team=all");
+        } 
     });
 }
 
