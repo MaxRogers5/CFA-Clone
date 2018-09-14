@@ -75,7 +75,8 @@ function respond() {
     this.res.writeHead(200);
     var req = request.text.substring(8,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage(get_matching_list(req, allPlayers));
+    var playerLookup = get_matching_list(req, allPlayers);
+    postMessage(playerLookup);
     this.res.end();
   }  
   else if(request.text && botRegexTw.test(request.text)) {
